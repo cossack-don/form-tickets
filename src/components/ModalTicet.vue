@@ -360,7 +360,7 @@ btnDropDownSelects() {
                     status: this.formModal.status,
                     priority: this.formModal.priority,
                     // увеличиваем id - тикета для нового
-                    ticket_number: this.formModal.ticket_number++,
+                    ticket_number: this.formModal.ticket_number,
         }
         // Добавляем в массив объект, который лежит в VUEX 
         this.$store.state.arrayTickets.push(addNewTicketInVuex)
