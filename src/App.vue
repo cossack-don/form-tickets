@@ -4,7 +4,7 @@
   <div class="main-wrapper card-user">
     <!-- Цикл отрисовки данных -->
     <div
-      v-for="(item, index) in mockArrayTickets"
+      v-for="(item, index) in $store.state.arrayTickets"
       :key="index"
       class="card-user__wrapper"
     >
@@ -84,23 +84,24 @@ export default {
     
     return {
 
+// Для теста моковый массив, основной лежит в vuex теперь
       mockArrayTickets:[
-        {
+      //   {
 
-        user: {
-          name: "Сергей",
-          email: "woadd@yandex.ru",
-          avatar:
-            "https://lh3.googleusercontent.com/ogw/ADGmqu9mwjd_DnKM_J5VCm0fPeUuIA1p-MU6rR7Fi0wV=s192-c-mo",
-        },
+      //   user: {
+      //     name: "Сергей",
+      //     email: "woadd@yandex.ru",
+      //     avatar:
+      //       "https://lh3.googleusercontent.com/ogw/ADGmqu9mwjd_DnKM_J5VCm0fPeUuIA1p-MU6rR7Fi0wV=s192-c-mo",
+      //   },
 
-        body_subject: "text text text text text text text text",
-        subject: "Жалоба на сайт",
-        status: 1,
-        priority: 2,
-        ticket_number: 1,
-        time_create_ticket: '02 2021 18:12:42',
-      }
+      //   body_subject: "text text text text text text text text",
+      //   subject: "Жалоба на сайт",
+      //   status: 1,
+      //   priority: 2,
+      //   ticket_number: 1,
+      //   time_create_ticket: '02 2021 18:12:42',
+      // }
       ],
       // 
       // 

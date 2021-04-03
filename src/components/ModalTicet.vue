@@ -345,8 +345,27 @@ btnDropDownSelects() {
             // this.ACTION_FLAG()
             this.hideFormIfPostFormSucc = false
             this.dropDownSelects = false
+// ---------------------------------------------------------------
+// Данные с формы, добавляем в vuex
+        let addNewTicketInVuex = {
+                      user: {
+                        name: this.formModal.user.name,
+                        email: this.formModal.user.email,
+                        avatar:
+                          "https://lh3.googleusercontent.com/ogw/ADGmqu9mwjd_DnKM_J5VCm0fPeUuIA1p-MU6rR7Fi0wV=s192-c-mo",
+                      },
 
+                    body_subject: this.formModal.body_subject,
+                    subject: this.formModal.subject,
+                    status: this.formModal.status,
+                    priority: this.formModal.priority,
+                    // увеличиваем id - тикета для нового
+                    ticket_number: this.formModal.ticket_number++,
+        }
+        // Добавляем в массив объект, который лежит в VUEX 
+        this.$store.state.arrayTickets.push(addNewTicketInVuex)
 
+// ---------------------------------------------------------------
             // поля формы - resets
             this.formModal.user.name = ''
             this.formModal.user.email = ''
