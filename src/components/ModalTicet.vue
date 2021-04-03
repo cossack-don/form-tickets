@@ -50,6 +50,12 @@
         ></textarea>
       </div>
 
+<!-- drop down selects  true/false -->
+<div class="btn-drop-down-modal" @click="btnDropDownSelects">{{textBtnDropDown}}</div>
+
+<!-- all selects -->
+<transition name="fade">
+<div v-if="dropDownSelects">
       <!-- selected first -->
       <div class="form-ticet__wrapper-input">
         <p class="form-ticet__name-input">Тип обращения:</p>
@@ -102,7 +108,8 @@
           </option>
         </select>
       </div>
-
+</div>
+</transition>
       <!-- ------------------------------------------ -->
       <!-- <span>Статус: {{ selected3 }}</span> -->
       <!-- для теста -->
@@ -187,7 +194,9 @@ export default {
       // flags
       hideFormIfPostFormSucc:true,
       flagErrorForm:false,
-   
+
+      dropDownSelects:false,
+      textBtnDropDown:'Показать опции',
       // -------------------------------------------------------
       selected: "Жалоба на пользователя",
 
@@ -243,6 +252,17 @@ export default {
   methods: {
     ...mapActions( ['ACTION_FLAG'] ),
 
+
+btnDropDownSelects() {
+  this.dropDownSelects = !this.dropDownSelects
+
+  if(this.dropDownSelects) {
+  this.textBtnDropDown = 'Скрыть опции'
+  } else {
+    this.textBtnDropDown = 'Показать опции'
+  }
+
+},
 // клик по крестику в форме
     clickIconClosePopup() {
       this.hideFormIfPostFormSucc = true
@@ -468,7 +488,19 @@ fill: #d64335;;
   }
 }
 
+// 
+.btn-drop-down-modal {
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  background: #78cd51;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
 
+
+// 
 input,
 textarea {
 

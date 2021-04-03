@@ -340,20 +340,33 @@ export default {
 }
 .form-ticet__wrapper-btns {
   margin-top: 15px;
+    justify-content: center;
 }
 .form-ticet__wrapper-input p {
-  font-size: 15px;
+  font-size: 13px;
 }
-
+.form-ticet__error-text {
+    margin-top: 5px;
+    font-size: 13px;
+}
 .registration__title {
   margin: 0;
   font-size: 20px;
 }
+
+.form-ticet__button_cancel,
+.form-ticet__button-create {
+  height: 30px;
+  width: 100px;
+}
 input, textarea {
-  padding: 10px;
+  padding: 5px;
 }
 textarea {
   height: auto;
+}
+select {
+  padding: 5px;
 }
 }
 </style>
