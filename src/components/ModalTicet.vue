@@ -272,6 +272,7 @@ btnDropDownSelects() {
 
     btnClickCloseMainForm() {
       this.flagErrorForm = false
+      this.dropDownSelects = false
       this.ACTION_FLAG()
     },
 
@@ -343,6 +344,8 @@ btnDropDownSelects() {
             this.flagErrorForm = false
             // this.ACTION_FLAG()
             this.hideFormIfPostFormSucc = false
+            this.dropDownSelects = false
+
 
             // поля формы - resets
             this.formModal.user.name = ''
@@ -497,6 +500,13 @@ fill: #d64335;;
   width: 200px;
   margin: 0 auto;
   margin-top: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    transition: 0.5s;
+    background: #81eb50;
+  }
 }
 
 
