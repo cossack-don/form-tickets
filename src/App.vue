@@ -338,5 +338,22 @@ export default {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+.form-ticet__wrapper-btns {
+  margin-top: 15px;
+}
+.form-ticet__wrapper-input p {
+  font-size: 15px;
+}
+
+.registration__title {
+  margin: 0;
+  font-size: 20px;
+}
+input, textarea {
+  padding: 10px;
+}
+textarea {
+  height: auto;
+}
 }
 </style>
